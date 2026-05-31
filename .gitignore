@@ -1,0 +1,19 @@
+# Python environment
+.venv/
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Raw and intermediate data
+data/raw/
+data/interim/
+
+# OS/system files
+.DS_Store
+Thumbs.db
+*.Zone.Identifier
+
+# Logs
+*.log
