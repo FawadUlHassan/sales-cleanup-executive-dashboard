@@ -1,0 +1,9 @@
+Issue,Count,Percentage,Business Impact,Initial Cleaning Decision
+Missing Description,1454,0.27,Product-level analysis is affected because item description is missing.,Investigate; keep if StockCode and revenue fields are valid.
+Missing CustomerID,135080,24.93,Customer-level analysis is affected because customer identity is missing.,"Keep for overall sales analysis, exclude from customer-level KPIs."
+Duplicate Rows,5268,0.97,"Duplicate records may inflate revenue, order count, and quantity sold.",Remove exact duplicate rows.
+Negative Quantity,10624,1.96,Likely cancellations or returns; should not be mixed with normal sales.,Label as cancellation/return; exclude from gross sales KPI.
+Negative UnitPrice,2,0.0,Invalid or adjustment records; requires investigation before KPI calculation.,Investigate separately; exclude from clean sales dataset if invalid.
+Zero UnitPrice,2515,0.46,Free/adjustment transactions; may distort average price and revenue analysis.,Keep or separate depending on business meaning; investigate.
+Negative Revenue,9290,1.71,Likely returns/cancellations; should be separated from positive sales revenue.,Separate as returns/cancellations.
+InvoiceNo starts with C,9288,1.71,Invoices starting with C likely represent cancellations.,Create transaction type field: Sale or Cancellation.
