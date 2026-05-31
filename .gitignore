@@ -17,3 +17,6 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Large processed datasets
+data/processed/clean_sales.csv
